@@ -13,14 +13,4 @@ public class PopulationController {
 
     @Autowired
     private PopulationService populationService;
-
-    @PostMapping("/import")
-    public String importPopulationData(@RequestParam String filePath) {
-        try {
-            populationService.importCsvData(filePath);
-            return "Data imported successfully!";
-        } catch (IOException | CsvException e) {
-            return "Error importing data: " + e.getMessage();
-        }
-    }
 }
