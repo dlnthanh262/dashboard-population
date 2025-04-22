@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS population (
-                                               id SERIAL PRIMARY KEY,
-                                               year INT NOT NULL,
-                                               country VARCHAR(255) NOT NULL,
-    population BIGINT NOT NULL
-    );
+   id SERIAL PRIMARY KEY,
+   country_name VARCHAR(255) NOT NULL,
+   country_code VARCHAR(255) NOT NULL,
+   year INT NOT NULL,
+   value BIGINT NOT NULL
+);
 
-INSERT INTO population (year, country, population)
-VALUES
-    (2020, 'Vietnam', 97338579),
-    (2020, 'USA', 331002651),
-    (2020, 'India', 1380004385);
+-- INSERT INTO population (country_name, country_code, year, value)
+-- VALUES ('Aruba', 'ABW', 1960, 54922);
+
+-- DELETE FROM population WHERE country_name='Aruba' AND year=1960;
