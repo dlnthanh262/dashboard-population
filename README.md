@@ -26,9 +26,23 @@ A simple dashboard web application built with Java Spring Boot (backend) and Rea
 
 ## PostgreSQL Setup
 
-###  Step 1: Run this in your terminal to create the database, user, and grant permissions:
+###  Run this in your terminal to create the database, user, and grant permissions:
 
 ```bash
 psql -U postgres -c "CREATE DATABASE population_db;"
 psql -U postgres -c "CREATE USER admin WITH PASSWORD 'admin123';"
 psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE population_db TO admin;"
+```
+
+---
+
+## FrontEnd Setup
+
+###  Run this in your terminal to show the dashboard in browser:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Open your browser and go to: http://localhost:5173
