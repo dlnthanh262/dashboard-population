@@ -36,9 +36,16 @@ psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE population_db TO admin;"
 
 ---
 
-## FrontEnd Setup
+## Running Steps
 
-###  Run this in your terminal to show the dashboard in browser:
+### Step 1: Run backend
+
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+
+### Step 2: Run frontend
 
 ```bash
 cd frontend
@@ -46,5 +53,4 @@ npm install
 npm run dev
 ```
 Open your browser and go to: http://localhost:5173
-
 
